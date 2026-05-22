@@ -1,0 +1,69 @@
+/* custom.css – premium dark‑theme utilities */
+
+/* Gradient background for the whole app */
+.bg-gradient-custom {
+    @apply bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700;
+}
+
+/* Card component base */
+.card {
+    @apply bg-gray-800/60 backdrop-blur rounded-xl shadow-lg p-6;
+}
+
+/* Action button base */
+.action-btn {
+    @apply inline-flex items-center justify-center p-2 rounded-full text-sm font-medium transition-colors;
+}
+.action-btn-view {
+    @apply bg-indigo-100 text-indigo-600 hover:bg-indigo-200;
+}
+.action-btn-edit {
+    @apply bg-amber-100 text-amber-600 hover:bg-amber-200;
+}
+.action-btn-delete {
+    @apply bg-rose-100 text-rose-600 hover:bg-rose-200;
+}
+
+/* Table container */
+.table-container {
+    @apply rounded-xl overflow-hidden shadow-lg bg-gray-800/50;
+}
+.table th, .table td {
+    @apply px-4 py-3 text-sm;
+}
+.table tbody tr:hover {
+    @apply bg-gray-700/30;
+}
+
+/* Badge styling (reuse existing component) */
+.badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium uppercase tracking-wider;
+}
+
+/* Input focus ring */
+.input-focus {
+    @apply focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500;
+}
+
+/* ==== Disable all hover effects (premium UI) ==== */
+.action-btn:hover,
+.action-btn-view:hover,
+.action-btn-edit:hover,
+.action-btn-delete:hover,
+.table tbody tr:hover,
+tr:hover,
+[class*="hover:bg-"]:hover,
+[class*="dark:hover:bg-"]:hover {
+    background-color: transparent !important;
+    color: inherit !important;
+}
+.action-btn:hover,
+.action-btn-view:hover,
+.action-btn-edit:hover,
+.action-btn-delete:hover,
+.table tbody tr:hover,
+tr:hover {
+    background-color: transparent !important;
+    color: inherit !important;
+}
+
